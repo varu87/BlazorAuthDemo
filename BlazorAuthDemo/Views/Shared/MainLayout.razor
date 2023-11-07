@@ -1,0 +1,30 @@
+﻿@using BlazorAuthDemo.Views.Components
+@inherits LayoutComponentBase
+
+<PageTitle>BlazorAuthDemo</PageTitle>
+
+<div class="page">
+    <div class="sidebar">
+        <NavMenu />
+    </div>
+
+    <main>
+        <div class="top-row px-4">
+            <AuthorizeView>
+                <Authorized>
+                    <AuthenticatedUser>
+                        <LoginDisplay />
+                    </AuthenticatedUser>
+                </Authorized>
+                <NotAuthorized>
+                    <a href="MicrosoftIdentity/Account/SignIn">Log in</a>
+                </NotAuthorized>
+            </AuthorizeView>
+        </div>
+
+        <article class="content px-4">
+            @Body
+        </article>
+    </main>
+</div>
+

@@ -1,0 +1,16 @@
+﻿@if (State == AuthorizedUserComponentState.Loading)
+{
+    <p>Loading..</p>
+}
+else if (State == AuthorizedUserComponentState.Content)
+{
+    @ChildContent
+}
+else if (State == AuthorizedUserComponentState.Unauthorized && Verbose)
+{
+    <p>Unauthorized</p>
+}
+else if (State == AuthorizedUserComponentState.Error)
+{
+    <p>An error occurred</p>
+}

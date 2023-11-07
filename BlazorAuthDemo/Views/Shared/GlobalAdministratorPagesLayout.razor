@@ -1,0 +1,7 @@
+﻿@using BlazorAuthDemo.Views.Components
+@inherits LayoutComponentBase
+@layout ProtectedPagesLayout
+
+<AuthorizedUser AuthorizedGroups="Global Administrator">
+    @Body
+</AuthorizedUser>

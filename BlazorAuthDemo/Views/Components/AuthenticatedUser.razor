@@ -1,0 +1,14 @@
+﻿@if(State == AuthenticatedUserComponentState.Loading)
+{
+    <p>Loading..</p>
+}
+else if(State == AuthenticatedUserComponentState.Content)
+{
+    <CascadingValue Value="@User">
+        @ChildContent
+    </CascadingValue>
+}
+else if(State == AuthenticatedUserComponentState.Error)
+{
+    <p>An error occurred</p>
+}
